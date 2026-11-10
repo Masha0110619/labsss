@@ -1,0 +1,26 @@
+main:
+  path: ../masha_lab_1/data/processed/ecommerce_churn_mar.csv
+  sha256_lab1_manifest: ../masha_lab_1/data/processed/injection_manifest.json
+  target: Churn
+
+reviews:
+  kaggle: nicapotato/womens-ecommerce-clothing-reviews
+  path: data/external/reviews/Womens Clothing E-Commerce Reviews.csv
+  sample_seed: 42
+  columns: {text: Review Text, high_cardinality: Clothing ID, rating: Rating, age: Age, department: Department Name}
+
+retail:
+  kaggle: mashlyn/online-retail-ii-uci
+  path: data/external/retail/online_retail_II.csv
+  dfs:
+    agg_primitives: [count, sum, mean, std, max, num_unique, percent_true]
+    trans_primitives: [weekday, hour, month, is_weekend]
+    max_depth: 2
+    max_features: 80
+
+images:
+  source: openml Fashion-MNIST (version 1), перші 6000 зображень
+  path: data/external/fashion/fashion_mnist_6000.npz
+  hog: {pixels_per_cell: 7, orientations: 9}
+
+join: позиційне, рядок i головного набору ↔ i-й відгук ↔ i-й клієнт роздрібного набору ↔ i-те зображення
