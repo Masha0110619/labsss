@@ -1,0 +1,17 @@
+column,group,missing_share,rule_index,strategy,indicator_sensitive,indicator_invariant
+Tenure,numeric_continuous,0.0462,0,median,True,False
+WarehouseToHome,numeric_continuous,0.0472,0,median,True,False
+CashbackAmount,numeric_continuous,0.2172,1,median,True,True
+OrderAmountHikeFromlastYear,numeric_continuous,0.6308,2,constant,True,True
+DaySinceLastOrder,numeric_continuous,0.0543,0,median,True,False
+HourSpendOnApp,numeric_discrete,0.0439,0,median,True,False
+NumberOfDeviceRegistered,numeric_discrete,0.0,0,median,True,False
+NumberOfAddress,numeric_discrete,0.0,0,median,True,False
+CouponUsed,numeric_discrete,0.0464,0,median,True,False
+OrderCount,numeric_discrete,0.0472,0,median,True,False
+Complain,binary_flag,0.0,0,median,True,False
+PreferredLoginDevice,categorical_nominal,0.0,0,most_frequent,False,False
+PreferredPaymentMode,categorical_nominal,0.1916,1,constant,False,False
+PreferedOrderCat,categorical_nominal,0.0,0,most_frequent,False,False
+MaritalStatus,categorical_nominal,0.0,0,most_frequent,False,False
+SatisfactionScore,categorical_ordinal,0.0,0,most_frequent,False,False

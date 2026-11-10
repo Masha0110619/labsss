@@ -1,0 +1,18 @@
+model_family: scale_invariant
+
+features:
+  numeric_continuous: [Tenure, CashbackAmount]
+  categorical_nominal: [CityTier, MaritalStatus]
+
+protected_attributes: [CityTier, Gender]
+
+imputation_policy:
+  numeric:
+    - {max_share: 1.00, strategy: median}
+  categorical:
+    - {max_share: 1.00, strategy: most_frequent}
+
+transform_policy:
+  scale_invariant:
+    numeric_continuous: [passthrough]
+    categorical_nominal: [ordinal_encoder]

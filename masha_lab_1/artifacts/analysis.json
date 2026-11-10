@@ -1,0 +1,97 @@
+{
+  "baseline": {
+    "rule": "Tenure <= 1 OR (Complain == 1 AND DaySinceLastOrder <= 3)",
+    "accuracy": 0.7813,
+    "recall_churn": 0.7785,
+    "precision_churn": 0.4196,
+    "flagged_share": 0.3124,
+    "churn_share": 0.1684,
+    "n": 5630
+  },
+  "proxy_association": {
+    "Tenure": {
+      "CityTier": 0.0799,
+      "Gender": 0.0541
+    },
+    "PreferredLoginDevice": {
+      "CityTier": 0.0121,
+      "Gender": 0.0159
+    },
+    "WarehouseToHome": {
+      "CityTier": 0.07,
+      "Gender": 0.0012
+    },
+    "PreferredPaymentMode": {
+      "CityTier": 0.396,
+      "Gender": 0.0458
+    },
+    "HourSpendOnApp": {
+      "CityTier": 0.0501,
+      "Gender": 0.0384
+    },
+    "NumberOfDeviceRegistered": {
+      "CityTier": 0.0313,
+      "Gender": 0.0306
+    },
+    "PreferedOrderCat": {
+      "CityTier": 0.218,
+      "Gender": 0.0743
+    },
+    "SatisfactionScore": {
+      "CityTier": 0.0625,
+      "Gender": 0.0427
+    },
+    "MaritalStatus": {
+      "CityTier": 0.0461,
+      "Gender": 0.038
+    },
+    "NumberOfAddress": {
+      "CityTier": 0.0365,
+      "Gender": 0.041
+    },
+    "Complain": {
+      "CityTier": 0.0142,
+      "Gender": 0.0403
+    },
+    "OrderAmountHikeFromlastYear": {
+      "CityTier": 0.0663,
+      "Gender": 0.0254
+    },
+    "CouponUsed": {
+      "CityTier": 0.0335,
+      "Gender": 0.0273
+    },
+    "OrderCount": {
+      "CityTier": 0.0497,
+      "Gender": 0.0277
+    },
+    "DaySinceLastOrder": {
+      "CityTier": 0.062,
+      "Gender": 0.0217
+    },
+    "CashbackAmount": {
+      "CityTier": 0.129,
+      "Gender": 0.0483
+    }
+  },
+  "churn_by_protected": {
+    "CityTier": {
+      "1": 0.1451,
+      "2": 0.1983,
+      "3": 0.2137
+    },
+    "Gender": {
+      "Female": 0.1549,
+      "Male": 0.1773
+    }
+  },
+  "n_features_out": {
+    "config_lr": 27,
+    "config_rf": 18
+  },
+  "train_test": {
+    "train": 3941,
+    "test": 1689,
+    "seed": 42
+  }
+}

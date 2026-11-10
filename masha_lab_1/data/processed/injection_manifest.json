@@ -1,0 +1,79 @@
+{
+  "source": {
+    "file": "E Commerce Dataset.xlsx",
+    "sheet": "E Comm",
+    "sha256": "db70f1e34bc5326887ea3fb3d2a0854e82c577d55ef3a76fdfb25328631bd44d",
+    "shape": [
+      5630,
+      20
+    ],
+    "kaggle": "ankitverma2010/ecommerce-customer-churn-analysis-and-prediction"
+  },
+  "label_fixes": {
+    "PreferredLoginDevice": {
+      "Phone": "Mobile Phone"
+    },
+    "PreferredPaymentMode": {
+      "CC": "Credit Card",
+      "COD": "Cash on Delivery"
+    },
+    "PreferedOrderCat": {
+      "Mobile": "Mobile Phone"
+    }
+  },
+  "dropped_columns": [
+    "CustomerID"
+  ],
+  "seed": 42,
+  "mechanism": "MAR: ймовірність пропуску залежить лише від спостережуваних незахищених ознак; структурна відсутність — детермінована",
+  "mar_rules": [
+    {
+      "column": "CashbackAmount",
+      "depends_on": "DaySinceLastOrder",
+      "condition": "<= 2",
+      "probability": 0.65,
+      "legend": "кешбек за нещодавнє замовлення ще не нараховано"
+    },
+    {
+      "column": "PreferredPaymentMode",
+      "depends_on": "OrderCount",
+      "condition": "<= 1",
+      "probability": 0.6,
+      "legend": "без історії замовлень улюблений спосіб оплати невідомий"
+    }
+  ],
+  "structural_rule": {
+    "column": "OrderAmountHikeFromlastYear",
+    "depends_on": "Tenure",
+    "condition": "< 12",
+    "legend": "приріст суми замовлень відносно минулого року не визначений для клієнтів, які з нами менше року"
+  },
+  "injected_cells": {
+    "CashbackAmount": 1246,
+    "PreferredPaymentMode": 1044,
+    "OrderAmountHikeFromlastYear": 3276
+  },
+  "missing_share_before": {
+    "Tenure": 0.0469,
+    "WarehouseToHome": 0.0446,
+    "HourSpendOnApp": 0.0453,
+    "OrderAmountHikeFromlastYear": 0.0471,
+    "CouponUsed": 0.0455,
+    "OrderCount": 0.0458,
+    "DaySinceLastOrder": 0.0545
+  },
+  "missing_share_after": {
+    "Tenure": 0.0469,
+    "WarehouseToHome": 0.0446,
+    "PreferredPaymentMode": 0.1854,
+    "HourSpendOnApp": 0.0453,
+    "OrderAmountHikeFromlastYear": 0.629,
+    "CouponUsed": 0.0455,
+    "OrderCount": 0.0458,
+    "DaySinceLastOrder": 0.0545,
+    "CashbackAmount": 0.2213
+  },
+  "target": "Churn",
+  "churn_share": 0.1684,
+  "n_rows": 5630
+}

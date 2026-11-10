@@ -1,0 +1,17 @@
+column,group,missing_share,rule_index,max_share,strategy,fill_value,indicator,n_out_features
+Tenure,numeric_continuous,0.0462,0,0.1,median,,False,18
+WarehouseToHome,numeric_continuous,0.0472,0,0.1,median,,False,18
+CashbackAmount,numeric_continuous,0.2172,1,0.4,median,,True,18
+OrderAmountHikeFromlastYear,numeric_continuous,0.6308,2,1.0,constant,0.0,True,18
+DaySinceLastOrder,numeric_continuous,0.0543,0,0.1,median,,False,18
+HourSpendOnApp,numeric_discrete,0.0439,0,0.1,median,,False,18
+NumberOfDeviceRegistered,numeric_discrete,0.0,0,0.1,median,,False,18
+NumberOfAddress,numeric_discrete,0.0,0,0.1,median,,False,18
+CouponUsed,numeric_discrete,0.0464,0,0.1,median,,False,18
+OrderCount,numeric_discrete,0.0472,0,0.1,median,,False,18
+Complain,binary_flag,0.0,0,0.1,median,,False,18
+PreferredLoginDevice,categorical_nominal,0.0,0,0.1,most_frequent,,False,18
+PreferredPaymentMode,categorical_nominal,0.1916,1,1.0,constant,Missing,False,18
+PreferedOrderCat,categorical_nominal,0.0,0,0.1,most_frequent,,False,18
+MaritalStatus,categorical_nominal,0.0,0,0.1,most_frequent,,False,18
+SatisfactionScore,categorical_ordinal,0.0,0,0.1,most_frequent,,False,18
