@@ -1,0 +1,7 @@
+{
+  "final_config": "config_rf",
+  "cost_mean": 41.296625222024865,
+  "cost_sd": 11.84040108878631,
+  "auc_mean": 0.9502728917668113,
+  "threshold_mean": 0.406
+}

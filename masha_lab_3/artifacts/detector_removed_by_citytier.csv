@@ -1,0 +1,7 @@
+config,fold,tier1,tier2,tier3,removed_total
+config_rf,0,0.029,0.0053,0.0362,136
+config_rf,1,0.0292,0.0104,0.035,136
+config_rf,2,0.0281,0.0214,0.036,136
+config_rf,3,0.028,0.02,0.0354,135
+config_rf,4,0.0293,0.0101,0.0352,136
+config_lr,0,0.0286,0.0579,0.0297,136

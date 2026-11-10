@@ -1,0 +1,595 @@
+model_family: scale_sensitive
+features:
+  numeric_continuous:
+  - WarehouseToHome
+  - OrderAmountHikeFromlastYear
+  - reviewer_age
+  numeric_discrete:
+  - HourSpendOnApp
+  - NumberOfDeviceRegistered
+  - NumberOfAddress
+  - review_rating
+  binary_flag:
+  - Complain
+  categorical_nominal:
+  - PreferredLoginDevice
+  - PreferredPaymentMode
+  - PreferedOrderCat
+  - MaritalStatus
+  - review_department
+  categorical_ordinal:
+  - SatisfactionScore
+  interaction_numeric: &id001
+  - Tenure
+  - OrderCount
+  - CashbackAmount
+  - DaySinceLastOrder
+  - CouponUsed
+  purchase_time:
+  - last_purchase_hour
+  - last_purchase_weekday
+  - last_purchase_month
+  high_cardinality:
+  - clothing_id
+  - retail_country
+  review_text:
+  - review_text
+  product_image:
+  - hog_000
+  - hog_001
+  - hog_002
+  - hog_003
+  - hog_004
+  - hog_005
+  - hog_006
+  - hog_007
+  - hog_008
+  - hog_009
+  - hog_010
+  - hog_011
+  - hog_012
+  - hog_013
+  - hog_014
+  - hog_015
+  - hog_016
+  - hog_017
+  - hog_018
+  - hog_019
+  - hog_020
+  - hog_021
+  - hog_022
+  - hog_023
+  - hog_024
+  - hog_025
+  - hog_026
+  - hog_027
+  - hog_028
+  - hog_029
+  - hog_030
+  - hog_031
+  - hog_032
+  - hog_033
+  - hog_034
+  - hog_035
+  - hog_036
+  - hog_037
+  - hog_038
+  - hog_039
+  - hog_040
+  - hog_041
+  - hog_042
+  - hog_043
+  - hog_044
+  - hog_045
+  - hog_046
+  - hog_047
+  - hog_048
+  - hog_049
+  - hog_050
+  - hog_051
+  - hog_052
+  - hog_053
+  - hog_054
+  - hog_055
+  - hog_056
+  - hog_057
+  - hog_058
+  - hog_059
+  - hog_060
+  - hog_061
+  - hog_062
+  - hog_063
+  - hog_064
+  - hog_065
+  - hog_066
+  - hog_067
+  - hog_068
+  - hog_069
+  - hog_070
+  - hog_071
+  - hog_072
+  - hog_073
+  - hog_074
+  - hog_075
+  - hog_076
+  - hog_077
+  - hog_078
+  - hog_079
+  - hog_080
+  - hog_081
+  - hog_082
+  - hog_083
+  - hog_084
+  - hog_085
+  - hog_086
+  - hog_087
+  - hog_088
+  - hog_089
+  - hog_090
+  - hog_091
+  - hog_092
+  - hog_093
+  - hog_094
+  - hog_095
+  - hog_096
+  - hog_097
+  - hog_098
+  - hog_099
+  - hog_100
+  - hog_101
+  - hog_102
+  - hog_103
+  - hog_104
+  - hog_105
+  - hog_106
+  - hog_107
+  - hog_108
+  - hog_109
+  - hog_110
+  - hog_111
+  - hog_112
+  - hog_113
+  - hog_114
+  - hog_115
+  - hog_116
+  - hog_117
+  - hog_118
+  - hog_119
+  - hog_120
+  - hog_121
+  - hog_122
+  - hog_123
+  - hog_124
+  - hog_125
+  - hog_126
+  - hog_127
+  - hog_128
+  - hog_129
+  - hog_130
+  - hog_131
+  - hog_132
+  - hog_133
+  - hog_134
+  - hog_135
+  - hog_136
+  - hog_137
+  - hog_138
+  - hog_139
+  - hog_140
+  - hog_141
+  - hog_142
+  - hog_143
+  - hog_144
+  - hog_145
+  - hog_146
+  - hog_147
+  - hog_148
+  - hog_149
+  - hog_150
+  - hog_151
+  - hog_152
+  - hog_153
+  - hog_154
+  - hog_155
+  - hog_156
+  - hog_157
+  - hog_158
+  - hog_159
+  - hog_160
+  - hog_161
+  - hog_162
+  - hog_163
+  - hog_164
+  - hog_165
+  - hog_166
+  - hog_167
+  - hog_168
+  - hog_169
+  - hog_170
+  - hog_171
+  - hog_172
+  - hog_173
+  - hog_174
+  - hog_175
+  - hog_176
+  - hog_177
+  - hog_178
+  - hog_179
+  - hog_180
+  - hog_181
+  - hog_182
+  - hog_183
+  - hog_184
+  - hog_185
+  - hog_186
+  - hog_187
+  - hog_188
+  - hog_189
+  - hog_190
+  - hog_191
+  - hog_192
+  - hog_193
+  - hog_194
+  - hog_195
+  - hog_196
+  - hog_197
+  - hog_198
+  - hog_199
+  - hog_200
+  - hog_201
+  - hog_202
+  - hog_203
+  - hog_204
+  - hog_205
+  - hog_206
+  - hog_207
+  - hog_208
+  - hog_209
+  - hog_210
+  - hog_211
+  - hog_212
+  - hog_213
+  - hog_214
+  - hog_215
+  - hog_216
+  - hog_217
+  - hog_218
+  - hog_219
+  - hog_220
+  - hog_221
+  - hog_222
+  - hog_223
+  - hog_224
+  - hog_225
+  - hog_226
+  - hog_227
+  - hog_228
+  - hog_229
+  - hog_230
+  - hog_231
+  - hog_232
+  - hog_233
+  - hog_234
+  - hog_235
+  - hog_236
+  - hog_237
+  - hog_238
+  - hog_239
+  - hog_240
+  - hog_241
+  - hog_242
+  - hog_243
+  - hog_244
+  - hog_245
+  - hog_246
+  - hog_247
+  - hog_248
+  - hog_249
+  - hog_250
+  - hog_251
+  - hog_252
+  - hog_253
+  - hog_254
+  - hog_255
+  - hog_256
+  - hog_257
+  - hog_258
+  - hog_259
+  - hog_260
+  - hog_261
+  - hog_262
+  - hog_263
+  - hog_264
+  - hog_265
+  - hog_266
+  - hog_267
+  - hog_268
+  - hog_269
+  - hog_270
+  - hog_271
+  - hog_272
+  - hog_273
+  - hog_274
+  - hog_275
+  - hog_276
+  - hog_277
+  - hog_278
+  - hog_279
+  - hog_280
+  - hog_281
+  - hog_282
+  - hog_283
+  - hog_284
+  - hog_285
+  - hog_286
+  - hog_287
+  - hog_288
+  - hog_289
+  - hog_290
+  - hog_291
+  - hog_292
+  - hog_293
+  - hog_294
+  - hog_295
+  - hog_296
+  - hog_297
+  - hog_298
+  - hog_299
+  - hog_300
+  - hog_301
+  - hog_302
+  - hog_303
+  - hog_304
+  - hog_305
+  - hog_306
+  - hog_307
+  - hog_308
+  - hog_309
+  - hog_310
+  - hog_311
+  - hog_312
+  - hog_313
+  - hog_314
+  - hog_315
+  - hog_316
+  - hog_317
+  - hog_318
+  - hog_319
+  - hog_320
+  - hog_321
+  - hog_322
+  - hog_323
+  dfs_features:
+  - dfs_COUNT_invoices
+  - dfs_MAX_invoices_n_lines
+  - dfs_MAX_invoices_n_unique_items
+  - dfs_MAX_invoices_quantity
+  - dfs_MAX_invoices_total
+  - dfs_MEAN_invoices_n_lines
+  - dfs_MEAN_invoices_n_unique_items
+  - dfs_MEAN_invoices_quantity
+  - dfs_MEAN_invoices_total
+  - dfs_PERCENT_TRUE_invoices_is_return
+  - dfs_STD_invoices_n_lines
+  - dfs_STD_invoices_n_unique_items
+  - dfs_STD_invoices_quantity
+  - dfs_STD_invoices_total
+  - dfs_SUM_invoices_n_lines
+  - dfs_SUM_invoices_n_unique_items
+  - dfs_SUM_invoices_quantity
+  - dfs_SUM_invoices_total
+  - dfs_NUM_UNIQUE_invoices_HOUR_invoice_date
+  - dfs_NUM_UNIQUE_invoices_MONTH_invoice_date
+  - dfs_NUM_UNIQUE_invoices_WEEKDAY_invoice_date
+  - dfs_PERCENT_TRUE_invoices_IS_WEEKEND_invoice_date
+protected_attributes:
+- CityTier
+- Gender
+group_kinds:
+  numeric_continuous: numeric
+  numeric_discrete: numeric
+  binary_flag: numeric
+  categorical_nominal: categorical
+  categorical_ordinal: categorical
+  interaction_numeric: numeric
+  purchase_time: numeric
+  high_cardinality: categorical
+  review_text: text
+  product_image: numeric
+  dfs_features: numeric
+imputation_policy:
+  numeric:
+  - max_share: 0.1
+    strategy: median
+  - max_share: 0.4
+    strategy: median
+    add_indicator: true
+  - max_share: 1.0
+    strategy: constant
+    fill_value: 0
+    add_indicator: true
+  categorical:
+  - max_share: 0.1
+    strategy: most_frequent
+  - max_share: 1.0
+    strategy: constant
+    fill_value: Missing
+  text:
+  - max_share: 1.0
+    strategy: constant
+    fill_value: ''
+  scale_sensitive:
+    numeric:
+    - max_share: 0.1
+      strategy: median
+      add_indicator: true
+    - max_share: 0.4
+      strategy: median
+      add_indicator: true
+    - max_share: 1.0
+      strategy: constant
+      fill_value: 0
+      add_indicator: true
+transform_policy:
+  scale_sensitive:
+    numeric_continuous:
+    - yeo_johnson
+    - robust_scaler
+    numeric_discrete:
+    - robust_scaler
+    binary_flag:
+    - passthrough
+    categorical_nominal:
+    - frequency_encoder
+    - standard_scaler
+    categorical_ordinal:
+    - ordinal_encoder
+    - min_max_scaler
+    interaction_numeric:
+    - pairwise_products:
+        columns: *id001
+    - yeo_johnson_std
+    purchase_time:
+    - periodic_spline:
+        periods:
+          last_purchase_hour: 24
+          last_purchase_weekday: 7
+          last_purchase_month: 12
+    high_cardinality:
+    - target_encoder:
+        min_frequency: 5
+        cv: 5
+    review_text:
+    - lda_topics:
+        n_topics: 8
+    - standard_scaler
+    product_image:
+    - hog_pca:
+        n_components: 8
+    - standard_scaler
+    dfs_features:
+    - yeo_johnson_std
+  scale_invariant:
+    numeric_continuous:
+    - quantile_bins:
+        n_bins: 8
+    numeric_discrete:
+    - passthrough
+    binary_flag:
+    - passthrough
+    categorical_nominal:
+    - ordinal_encoder
+    categorical_ordinal:
+    - ordinal_encoder
+    interaction_numeric:
+    - pairwise_products:
+        columns: *id001
+    purchase_time:
+    - passthrough
+    high_cardinality:
+    - target_encoder:
+        min_frequency: 5
+        cv: 5
+    review_text:
+    - lda_topics:
+        n_topics: 8
+    product_image:
+    - hog_pca:
+        n_components: 8
+    dfs_features:
+    - passthrough
+fairness:
+  protected: CityTier
+  privileged: 1
+  unprivileged: 3
+  favourable_label: 1
+  threshold_default: 0.5
+selection:
+  spearman_threshold: 0.9
+  k_filter: 30
+  wrapper:
+    k_features: 10
+    forward: true
+    floating: false
+    cv: 2
+    scoring: roc_auc
+    estimator: scaled_liblinear_lr
+  embedded:
+    l1_ratio: 0.5
+    C: 0.5
+link:
+  kind: detector
+  name: isolation_forest
+  params:
+    contamination: 0.03
+    n_estimators: 100
+    random_state: 42
+  rationale: 'ланка-детектор: прибирає з тренувального фолда аномальні профілі (помилкові/екстремальні анкети), на які чутлива логістична регресія; дисбаланс 17/83 закривається class_weight, а не синтезом'
+model:
+  scale_sensitive:
+    name: logistic_regression
+    params:
+      max_iter: 2000
+      solver: lbfgs
+  scale_invariant:
+    name: random_forest
+    params:
+      n_estimators: 200
+      random_state: 42
+      n_jobs: 1
+cv:
+  outer:
+    n_splits: 5
+    shuffle: true
+    random_state: 42
+  inner:
+    n_splits: 3
+    shuffle: true
+    random_state: 42
+search:
+  method: randomized
+  n_iter: 12
+  scoring: roc_auc
+  random_state: 42
+  space:
+    common:
+      embedded__estimator__C:
+        type: float
+        low: 0.05
+        high: 5.0
+        log: true
+      detect__kw_args:
+        type: categorical
+        choices:
+        - contamination: 0.01
+        - contamination: 0.03
+        - contamination: 0.05
+    scale_sensitive:
+      model__C:
+        type: float
+        low: 0.01
+        high: 10.0
+        log: true
+    scale_invariant:
+      model__max_depth:
+        type: int
+        low: 4
+        high: 14
+      model__min_samples_leaf:
+        type: int
+        low: 1
+        high: 12
+costs:
+  C00: 0
+  C01: 250
+  C10: 1000
+  C11: 0
+  unit: ум. од. (валюта набору не задокументована)
+  thresholds:
+    start: 0.02
+    stop: 0.98
+    num: 97
+  justification:
+    C01: 'хибна пропозиція утримання лояльному клієнту: ваучер ≈ медіанний кешбек (163) + операційні витрати контакт-центру ≈ 90'
+    C10: 'пропущений відтік: втрачена маржа за горизонт 3 міс. — кешбек 5 % від обороту → оборот ≈ 3 540/міс., маржа 10 % ≈ 350/міс. × 3'
+    C00_C11: правильні рішення без додаткових витрат; вартість утримання врахована в C01 як ціна дії, однакова для TP і FP

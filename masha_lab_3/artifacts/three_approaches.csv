@@ -1,0 +1,5 @@
+,auc_mean,auc_mean,auc_mean,cost_mean,cost_mean,cost_mean,f1_mean,f1_mean,f1_mean
+variant,base,cs,cs_T,base,cs,cs_T,base,cs,cs_T
+config,,,,,,,,,
+config_lr,0.871,0.871,0.871,97.735,73.401,75.355,0.563,0.59,0.599
+config_rf,0.946,0.95,0.95,66.652,43.472,41.297,0.719,0.769,0.751
